@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="post.css">
+
+<style>
+
+
+*{
+
+padding: 0;
+margin: 0;
+/* overflow: hidden; */
+box-sizing: border-box;
+
+}
+
+.container1{
+
+width: 100vw;
+height: 100vh;
+
+
+}
+
+
+nav{
+
+position: sticky;
+width: 100vw;
+height: 6vh;
+/* background-color: rgb(64, 111, 182); */
+
+background-color: #4BBEFF;
+}
+
+.navc{
+
+width: 95vw;
+height: 100%;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.brand_name{
+
+display: flex;
+align-items: center;
+
+}
+.brand_side {
+
+display: flex;
+justify-content: space-evenly;
+align-items: center;   
+width: 30%; 
+height: 100%;    
+
+
+}
+
+.style_bar{
+
+opacity: 0;
+
+}
+
+.profile_new1:hover{
+
+cursor: pointer;    
+transition-property: all;
+transition-duration: 300ms;
+transition-timing-function: linear;
+color: white;      
+
+
+
+}
+
+.s a{
+
+color: black;
+text-decoration: none;
+
+}
+
+.s:hover{
+
+cursor: pointer;    
+transition-property: all;
+transition-duration: 300ms;
+transition-timing-function: linear;
+color: white;  
+.style_bar{
+transition-property: all;
+transition-duration: 300ms;
+transition-timing-function: linear;
+opacity: 1;
+}
+.fa-solid{
+ transition-property: all;
+transition-duration: 300ms;
+transition-timing-function: linear;
+color: white;
+
+
+}
+
+}
+
+
+
+.fa-solid {
+
+font-size: 0.7vw;
+ color: rgb(220, 111, 111);
+
+}
+
+</style>
+
+
+</head>
+<body>
+
+    <script src="https://kit.fontawesome.com/0d5ba16c9d.js" crossorigin="anonymous"></script>      
+
+
+<div class="container1">
+
+
+    <nav>
+
+        <div class="navc">
+        
+        <!--Brand name-->
+        <div class="brand_name">
+            <h3 style="font-size: 1.5vw;font-style: italic;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;font-weight: lighter;"><span style="border: 2px solid grey ;border-radius: 50%;padding: 0.2vw 0.5vw;background-color:whitesmoke;" >A</span><span style="border-bottom: 2px solid black;">mico</span></h3>
+        </div>
+        
+        <!-- booking cat filter -->
+        <div class="brand_side">
+
+
+            <span class="s" style="display: flex;gap: 0.5vw;align-items: center;" ><span style="font-size: 1vw;"><a href="index.php">Login</a></span> <i class="fa-solid fa-chevron-down"></i> <div class="style_bar"  style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+            <span class="s" style="display: flex;gap: 0.5vw;align-items: center;"><span style="font-size: 1vw;"><a href="home.html">Home</a></span> <i class="fa-solid fa-chevron-down"></i><div class="style_bar" style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+            <span class="s" style="display: flex;gap: 0.5vw;align-items: center;"><span style="font-size: 1vw;"><a href="post.html">Post</a></span> <i class="fa-solid fa-chevron-down"></i><div class="style_bar" style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+            <span class="s" style="display: flex;gap: 0.5vw;align-items: center;" ><span style="font-size: 1vw;"><a href="about.html">About Us</a></span> <i class="fa-solid fa-chevron-down"></i> <div class="style_bar"  style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+            <span class="s" style="display: flex;gap: 0.5vw;align-items: center;" ><span style="font-size: 1vw;"><a href="contact.html">Contact</a></span> <i class="fa-solid fa-chevron-down"></i> <div class="style_bar"  style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+            
+            </div>    
+        
+        <!-- profile section -->
+        <div class="profile_new" style="display: flex;gap: 0.6vw;align-items: center;">
+        
+        <i style="font-size: 1vw;border: 5px solid gray;border-radius: 50%;padding: 0.4vw 0.4vw;color: black;" class="fa-solid fa-user"></i>  
+        <span class="profile_new1" style="font-size: 1vw;">Profile</span>
+        
+        </div>
+        
+        
+        </div>    
+        
+        
+        </nav>    
+        
+
+        <main>
+            <div class="post-container">
+                <div class="post">
+                    <div class="post-image">
+                        <img src="image.jpg" alt="Post Image">
+                    </div>
+                    <div class="post-details">
+                        <h2>Title</h2>
+                        <p>Description</p>
+                    </div>
+                    <div class="post-actions">
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <form id="postForm" enctype="multipart/form-data">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+                <button type="submit">Submit Post</button>
+            </form>
+            <div id="imageContainer" ></div>
+        </main>
+        
+
+</div>
+
+    <script src="post.js"></script>
+</body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+
+*{
+
+padding: 0;
+margin: 0;
+/* overflow: hidden; */
+box-sizing: border-box;
+
+}
+
+.container1{
+
+width: 100vw;
+height: 100vh;
+
+
+}
+
+
+nav{
+
+position: sticky;
+width: 100vw;
+height: 6vh;
+/* background-color: rgb(64, 111, 182); */
+
+background-color: #4BBEFF;
+}
+
+.navc{
+
+width: 95vw;
+height: 100%;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.brand_name{
+
+display: flex;
+align-items: center;
+
+}
+.brand_side {
+
+display: flex;
+justify-content: space-evenly;
+align-items: center;   
+width: 30%; 
+height: 100%;    
+
+
+}
+
+.style_bar{
+
+opacity: 0;
+
+}
+
+.profile_new1:hover{
+
+cursor: pointer;    
+transition-property: all;
+transition-duration: 300ms;
+transition-timing-function: linear;
+color: white;      
+
+
+
+}
+
+.s a{
+
+color: black;
+text-decoration: none;
+
+}
+
+.s:hover{
+
+cursor: pointer;    
+transition-property: all;
+transition-duration: 300ms;
+transition-timing-function: linear;
+color: white;  
+.style_bar{
+transition-property: all;
+transition-duration: 300ms;
+transition-timing-function: linear;
+opacity: 1;
+}
+.fa-solid{
+    transition-property: all;
+transition-duration: 300ms;
+transition-timing-function: linear;
+color: white;
+
+
+}
+
+}
+
+
+
+.fa-solid {
+
+font-size: 0.7vw;
+    color: rgb(220, 111, 111);
+
+}
+
+.contact11{
+
+width: 100vw;
+height: 100vh;
+
+
+}
+
+.contact-form input{
+
+width: 10vw;
+height: 4vh;
+font-size: 0.7vw;
+
+}
+    
+.aboutright img:hover{
+
+scale: 1.06;
+transition: all;
+transition-timing-function: ease-in-out;
+transition-duration: 300ms;
+}
+
+.ourteam{
+	width: 60vw;
+	height: 60vh;
+	margin: auto;
+	margin-top: 5vh;
+
+}
+.slide-container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	box-shadow: 0 114px 118px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+
+}
+.slide-container .slides{
+	width: 100%;
+	height: calc(100% - 40px);
+	position: relative;
+	overflow: hidden;
+}
+.slide-container .slides .img{
+	/* width: 60vw; */
+	height: 100%;
+	position: absolute;
+	object-fit: contain;
+    width: 50vw;
+}
+.slide-container .slides .img:not(.active){
+	top: 0;
+	left: -100%;
+}
+span.next, span.prev{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 14px;
+	color: black;
+	font-size: 3vw;
+	font-weight: bold;
+	transition: 0.5s;
+	border-radius: 3px;
+	user-select: none;
+	cursor: pointer;
+	z-index: 1;
+}
+span.next{
+	right: -5vw;
+
+}
+span.prev{
+	left: -5vw;
+}
+span.next:hover, span.prev:hover{
+	background-color: #ede6d6;
+	opacity: 0.8;
+	color: #222;
+} 
+.dotsContainer{
+	position: absolute;
+	display: flex;
+	gap: 1vw;
+	z-index: 3;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 6vh;
+}
+.dotsContainer .dot{
+	width: 1vw;
+	height: 1vw;
+	border: 3px solid #bbb;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.6s ease;
+}
+.dotsContainer .active{
+	background-color: #555;
+}
+
+@keyframes next1{
+	from{
+		left: 0%
+	}
+	to{
+		left: -100%;
+	}
+}
+@keyframes next2{
+	from{
+		left: 100%
+	}
+	to{
+		left: 0%;
+	}
+}
+
+@keyframes prev1{
+	from{
+		left: 0%
+	}
+	to{
+		left: 100%;
+	}
+}
+@keyframes prev2{
+	from{
+		left: -100%
+	}
+	to{
+		left: 0%;
+	}
+}
+
+.profile_new1 a:hover{
+
+color: white;
+
+}
+
+    
+</style>   
+    
+<link rel = "stylesheet" href = "font/fonts.css">
+<!-- normalize css -->
+<link rel = "stylesheet" href = "css/normalize.css">
+<!-- custom css -->
+<link rel = "stylesheet" href = "css/utility.css">
+<link rel = "stylesheet" href = "css/style.css">
+<link rel = "stylesheet" href = "css/responsive.css">    
+
+
+
+</head>
+<body>
+    
+    <script src="https://kit.fontawesome.com/0d5ba16c9d.js" crossorigin="anonymous"></script>  
+
+<div class="about11">
+
+<nav>
+
+<div class="navc">
+
+<!--Brand name-->
+<div class="brand_name">
+    <h3 style="font-size: 1.5vw;font-style: italic;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;font-weight: lighter;"><span style="border: 2px solid grey ;border-radius: 50%;padding: 0.2vw 0.5vw;background-color:whitesmoke;" >A</span><span style="border-bottom: 2px solid black;">mico</span></h3>
+</div>
+
+<!-- booking cat filter -->
+<div class="brand_side">
+
+
+    <span class="s" style="display: flex;gap: 0.5vw;align-items: center;" ><span style="font-size: 1vw;"><a href="index.php">Login</a></span> <i class="fa-solid fa-chevron-down"></i> <div class="style_bar"  style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+    <span class="s" style="display: flex;gap: 0.5vw;align-items: center;"><span style="font-size: 1vw;"><a href="home.html">Home</a></span> <i class="fa-solid fa-chevron-down"></i><div class="style_bar" style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+    <span class="s" style="display: flex;gap: 0.5vw;align-items: center;"><span style="font-size: 1vw;"><a href="post.html">Post</a></span> <i class="fa-solid fa-chevron-down"></i><div class="style_bar" style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+    <span class="s" style="display: flex;gap: 0.5vw;align-items: center;" ><span style="font-size: 1vw;"><a href="about.html">About Us</a></span> <i class="fa-solid fa-chevron-down"></i> <div class="style_bar"  style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+    <span class="s" style="display: flex;gap: 0.5vw;align-items: center;" ><span style="font-size: 1vw;"><a href="contact.html">Contact</a></span> <i class="fa-solid fa-chevron-down"></i> <div class="style_bar"  style="width: 4.2vw;height: 0.42vh;background-color: rgb(220, 111, 111);position: absolute;bottom: 0;"></div></span>
+    
+    </div>  
+
+<!-- profile section -->
+<div class="profile_new" style="display: flex;gap: 0.6vw;align-items: center;">
+
+    <i style="font-size: 1.2vw;border: 1px solid gray;border-radius: 50%;padding: 0.4vw 0.4vw;color: black;" class="fa-solid fa-user"></i>  
+    <span class="profile_new1" style="font-size: 1vw;"><a href="profile.html">Profile</a></span>
+    <a href="logout.php"><i style="font-size: 1vw;border-radius: 50%;padding: 0.4vw 0.4vw;color: black;"   class="fa-solid fa-right-from-bracket"></i></a>
+    
+</div>
+
+</div>    
+
+</nav>  
+
+<header class = "flex header-sm">
+    <div class = "container">
+        <div class = "header-title">
+            <h1 style="font-size: 3vw;">About</h1>
+            <p style="font-size: 1vw;width: 55vw;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum maxime enim odit illum in molestias beatae doloremque, ratione optio.</p>
+        </div>
+    </div>
+</header>
+
+
+<div class="div" style="margin-top: 5vh;margin-left: 2vw;font-size: 2vw;">----------<span style="color: #4BBEFF;">About</span> <span style="color: rgb(225, 225, 145);">Us</span>------------------------------------------------------</div>
+
+<div class="aboutsect1" style="display: flex;gap: 7vw;background-color: aliceblue;margin-top: 4vh;">
+
+<div class="aboutleft">
+
+<h1 style="margin-top: 5vh;margin-left: 3vw;font-size: 2.5vw;">Amico is a Social <br> Travel Community & <br> Experiences Marketplace</h1>       
+
+<p style="margin-top: 5vh;margin-left: 3vw;font-size: 1.3vw;width: 50vw;color: grey;">Amico is Your Community-Powered Marketplace for Authentic Experiences. Here you can connect with like minded travelers, create your travel groups, book experiences and share your travel stories. We have connected more then 50K+ travelers with each other, every month 2000+ travelers are joining our community meet-ups, icebreaking sessions, experiences and trips. That’s not all, with Amico you take advice from locals, we have 3000+ verified locals who can help you on your travel journey. We are building Bharat’s fastest growing network of travellers & aspires to be their Partner in Every Stage of their Journey</p>
+
+<ul style="margin-top: 5vh;margin-left: 3vw;font-size: 1.7vw;width: 50vw;display: flex;flex-direction: column;gap: 1vh;">
+    <li><span style="color: salmon;">1)</span> Connect and chat with like minded travelers.</li>
+    <li><span style="color: salmon;">2)</span> Create your Travel Groups.</li>
+    <li><span style="color: salmon;">3)</span> Book Authentic experiences, trips & get guided by locals.</li>
+    <li><span style="color: salmon;">4)</span> Share your Travel Stories.</li>
+</ul>
+
+<button style="margin-top: 3vh;margin-left: 4vw;font-size: 1.2vw;padding: 15px 15px ;border: 0.4vh solid salmon;border-radius: 50px;margin-bottom: 2vh;color: beige;background-color: rgb(132, 145, 174);">Get Started</button>
+
+</div> 
+<div class="aboutright">
+
+<img style="height: 80vh;width: 34vw;border: 2px solid white;border-radius: 50%;margin-top: 2.9vh;" src="about.img" alt="">
+
+
+</div>
+
+</div>
+
+<div class="div" style="margin-top: 5vh;margin-left: 2vw;font-size: 1.4vw;margin-left: 4vw;"><SPAN><i style="font-size: 1.5vw;color: blueviolet;" class="fa-solid fa-bell"></i></SPAN><span > SOLUTIONS   FROM   AMICO</span></div>
+
+
+<div class="aboutgrid" style="width: 80vw;margin: auto;margin-top: 5vh;display: flex;justify-content: space-evenly;gap: 3vw;">
+
+<div class="aboutitem" style="display: flex;flex-direction: column;gap: 2vh;width: 25vw;justify-content: center;border: 3px solid black;padding: 50px 50px;border-radius: 50px;background-color: #eeb8da;">
+
+<img style="width: 5vw;height: 10vh;" src="about11.png" alt="">    
+
+<h1 style="font-size: 1vw;">FIND A TRAVEL BUDDY</h1>
+
+<p style="font-size: 1vw;color: gray;">Our Proprietary Algorithm matches potential travellers, Local Travel Influencers and Travel Providers based on their interest , behavioural and demographic data.</p>
+
+</div>    
+
+<div class="aboutitem" style="display: flex;flex-direction: column;gap: 2vh;width: 25vw;justify-content: center;border: 3px solid black;padding: 50px 50px;border-radius: 50px;background-color: #eeb8da;">
+
+<img style="width: 5vw;height: 10vh;" src="about12.png" alt="">    
+
+<h1 style="font-size: 1vw;">LIST YOUR EXPERIENCE</h1>
+
+<p style="font-size: 1vw;color: gray;">Our Proprietary Algorithm matches potential travellers, Local Travel Influencers and Travel Providers based on their interest , behavioural and demographic data.</p>
+
+</div>  
+
+<div class="aboutitem" style="display: flex;flex-direction: column;gap: 2vh;width: 25vw;justify-content: center;border: 3px solid black;padding: 50px 50px;border-radius: 50px;background-color: #eeb8da;">
+
+    <img style="width: 5vw;height: 10vh;" src="about13.png" alt="">    
+    
+    <h1 style="font-size: 1vw;">AMICO CONCIERGE</h1>
+    
+    <p style="font-size: 1vw;color: gray;">Our Proprietary Algorithm matches potential travellers, Local Travel Influencers and Travel Providers based on their interest , behavioural and demographic data.</p>
+    
+    </div>  
+
+    <div class="aboutitem" style="display: flex;flex-direction: column;gap: 2vh;width: 25vw;justify-content: center;border: 3px solid black;padding: 50px 50px;border-radius: 50px;background-color: #eeb8da;">
+
+        <img style="width: 5vw;height: 10vh;" src="about14.png" alt="">    
+        
+        <h1 style="font-size: 1vw;">CREATE YOUR GROUP</h1>
+        
+        <p style="font-size: 1vw;color: gray;">Our Proprietary Algorithm matches potential travellers, Local Travel Influencers and Travel Providers based on their interest , behavioural and demographic data.</p>
+        
+        </div>  
+
+
+
+
+</div>
+
+<div class="div" style="margin-top: 5vh;margin-left: 2vw;font-size: 1.4vw;margin-left: 4vw;"><SPAN><i style="font-size: 1.5vw;color: brown;" class="fa-solid fa-users"></i></SPAN><span style="margin-left: 0.5vw;"> Our Team</span></div>
+
+
+<section class="ourteam">
+
+
+    <div class="slide-container">
+    
+        <div class="slides">
+            <div class="img" class="active" style="display: flex;">
+                <img  src="piy.img.jpg" >
+                <div class="des" style="display: flex;flex-direction: column;gap: 0.5vh;width: 45vw;">
+                    <h1 style="font-size: 1.5vw;margin-top: 2vh;text-align: center;margin-top: 5vh;"><u>Piyush (Backend Developer)</u></h1>
+                    <p style="font-size: 1.45vw;margin-left: 2vw;margin-top: 2vh;color: #555;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid qui accusamus architecto a ullam nesciunt, at fugit quo? Amet, a? Ex ipsum ipsam odit.</p>
+                    <p style="font-size: 1vw;margin-top: 3.5vh;margin-left: 2vw;">Contact no - 9123484733</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Mail - piyush@gmail.com</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">insta id - piyush_1990</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Currently pursuing- SE</p>
+                </div>
+            </div>
+            <div class="img" style="display: flex;">
+                <img  src="sou.img.jpeg" >
+                <div class="des" style="display: flex;flex-direction: column;gap: 0.5vh;width: 45vw;">
+                    <h1 style="font-size: 1.5vw;margin-top: 2vh;text-align: center;margin-top: 5vh;margin-left: 1.5vw;"><u>Sourabh (Frontend Developer)</u></h1>
+                    <p style="font-size: 1.45vw;margin-left: 2vw;margin-top: 2vh;color: #555;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid qui accusamus architecto a ullam nesciunt, at fugit quo? Amet, a? Ex ipsum ipsam odit.</p>
+                    <p style="font-size: 1vw;margin-top: 3.5vh;margin-left: 2vw;">Contact no - 9123684733</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Mail - sourabh1418@gmail.com</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">insta id - Sourabh_1418</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Currently pursuing- SE</p>
+                </div>
+            </div>
+            <div class="img"  style="display: flex;">
+                <img  src="janu.img.jpeg" >
+                <div class="des" style="display: flex;flex-direction: column;gap: 0.5vh;width: 45vw;">
+                    <h1 style="font-size: 1.5vw;margin-top: 2vh;text-align: center;margin-top: 5vh;margin-left: 1.3vw;"><u>Janhavi (Backend Developer)</u></h1>
+                    <p style="font-size: 1.45vw;margin-left: 2vw;margin-top: 2vh;color: #555;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid qui accusamus architecto a ullam nesciunt, at fugit quo? Amet, a? Ex ipsum ipsam odit.</p>
+                    <p style="font-size: 1vw;margin-top: 3.5vh;margin-left: 2vw;">Contact no - 9023484733</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Mail - janhavi@gmail.com</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">insta id - Janhavi_123</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Currently pursuing- SE</p>
+                </div>
+            </div>
+            <div class="img"  style="display: flex;">
+                <img  src="jay.img.jpg" >
+                <div class="des" style="display: flex;flex-direction: column;gap: 0.5vh;width: 45vw;">
+                    <h1 style="font-size: 1.5vw;margin-top: 2vh;text-align: center;margin-top: 5vh;"><u>Jay (Frontend Developer)</u></h1>
+                    <p style="font-size: 1.45vw;margin-left: 2vw;margin-top: 2vh;color: #555;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid qui accusamus architecto a ullam nesciunt, at fugit quo? Amet, a? Ex ipsum ipsam odit.</p>
+                    <p style="font-size: 1vw;margin-top: 3.5vh;margin-left: 2vw;">Contact no - 9123484833</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Mail - jay00@gmail.com</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">insta id - Jay_1126</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Currently pursuing- SE</p>
+                </div>
+            </div>
+            <div class="img"  style="display: flex;">
+                <img  src="tej.img.jpg" >
+                <div class="des" style="display: flex;flex-direction: column;gap: 0.5vh;width: 45vw;">
+                    <h1 style="font-size: 1.5vw;margin-top: 2vh;text-align: center;margin-top: 5vh;margin-left: 1vw;"><u>Tejaswini (Backend Developer)</u></h1>
+                    <p style="font-size: 1.45vw;margin-left: 2vw;margin-top: 2vh;color: #555;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid qui accusamus architecto a ullam nesciunt, at fugit quo? Amet, a? Ex ipsum ipsam odit.</p>
+                    <p style="font-size: 1vw;margin-top: 3.5vh;margin-left: 2vw;">Contact no - 8123484733</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Mail - tejaswini98@gmail.com</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">insta id - tejaswini_889</p>
+                    <p style="font-size: 1vw;margin-top: 1.5vh;margin-left: 2vw;">Currently pursuing- SE</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="buttons">
+            <span class="next">&#10095;</span>
+            <span class="prev">&#10094;</span>
+        </div>
+    
+        <div class="dotsContainer">
+            <div class="dot active" attr='0' onclick="switchImage(this)"></div>
+            <div class="dot" attr='1' onclick="switchImage(this)"></div>
+            <div class="dot" attr='2' onclick="switchImage(this)"></div>
+            <div class="dot" attr='3' onclick="switchImage(this)"></div>
+            <div class="dot" attr='4' onclick="switchImage(this)"></div>
+        </div>
+    
+    </div>
+    
+    <script type="text/javascript">
+        
+        // Access the Images
+        let slideImages = document.querySelectorAll('.img');
+        // Access the next and prev buttons
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        // Access the indicators
+        let dots = document.querySelectorAll('.dot');
+    
+        var counter = 0;
+    
+        // Code for next button
+        next.addEventListener('click', slideNext);
+        function slideNext(){
+        slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+        if(counter >= slideImages.length-1){
+            counter = 0;
+        }
+        else{
+            counter++;
+        }
+        slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+        indicators();
+        }
+    
+        // Code for prev button
+        prev.addEventListener('click', slidePrev);
+        function slidePrev(){
+        slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+        if(counter == 0){
+            counter = slideImages.length-1;
+        }
+        else{
+            counter--;
+        }
+        slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+        indicators();
+        }
+    
+        // Auto slideing
+        function autoSliding(){
+            deletInterval = setInterval(timer, 2000);
+            function timer(){
+                slideNext();
+                indicators();
+            }
+        }
+        autoSliding();
+    
+        // Stop auto sliding when mouse is over
+        const container = document.querySelector('.slide-container');
+        container.addEventListener('mouseover', function(){
+            clearInterval(deletInterval);
+        });
+    
+        // Resume sliding when mouse is out
+        container.addEventListener('mouseout', autoSliding);
+    
+        // Add and remove active class from the indicators
+        function indicators(){
+            for(i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(' active', '');
+            }
+            dots[counter].className += ' active';
+        }
+    
+        // Add click event to the indicator
+        function switchImage(currentImage){
+            currentImage.classList.add('active');
+            var imageId = currentImage.getAttribute('attr');
+            if(imageId > counter){
+            slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+            counter = imageId;
+            slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+            }
+            else if(imageId == counter){
+                return;
+            }
+            else{
+            slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+            counter = imageId;
+            slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
+            }
+            indicators();
+        }
+
+
+        
+    
+    </script>
+    
+    
+    </section>
+
+
+
+    <footer style="width: 100vw;background-color: black;height: 50vh;margin-top: 15vh;">
+
+        <div class="footsect" style="display: flex;justify-content: space-around;">
+        
+        <div class="f1" style="width: 18%;position: relative;top: 5vh;">
+        <div class="h1" style="font-size: 1.7vw;margin-bottom: 2vh;">AMICO</div>
+        <div class="div" style="font-size: 1vw;display: inline;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam tempore ipsa necessitatibus omnis fugit sint officia aliquid, non excepturi sunt architecto veniam fuga odit? Officia harum, eum alias nostrum quas recusandae facilis ratione, excepturi magnam vitae autem consectetur, sapiente explicabo! Temporibus et ipsum minima eveniet!</div>
+        </div>
+        
+        <div class="f2">
+            <div class = "footer-item" style="position: relative;top: 3vh;">
+                <h2 style="font-size: 1.6vw;">Follow us on: </h2>
+                <ul class = "social-links" style="margin-top: 2vh;display: flex;gap: 1vw;">
+                    <li>
+                        <a href = "#">
+                            <i style="font-size: 1.5vw;" class = "fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i style="font-size: 1.5vw;" class = "fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i style="font-size: 1.5vw;" class = "fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i style="font-size: 1.5vw;" class = "fab fa-pinterest"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i style="font-size: 1.5vw;" class = "fab fa-google-plus"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="f3" style="position: relative;top: 4vh;display: flex;flex-direction: column;gap: 1vh;">
+           
+                <h2 style="font-size: 1.5vw;">Popular Places:</h2>
+                <ul style="font-size: 1vw;display: flex;flex-direction: column;gap: 1vh;margin-top: 1vh;text-align: start;">
+                    <li><i class="fas fa-map-marker-alt"></i> Uttarakhand</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Panchgani</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kerala</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jammu</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Agra</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Goa</li>
+                </ul>
+            
+        </div>
+        
+        
+        <div class="f4" style="position: relative;top: 3vh;">
+            <div class = "subscribe-form footer-item" >
+                <h2 style="font-size: 1vw;">Subscribe for Newsletter!</h2>
+                <form class = "flex" style="display: flex;flex-direction: column;gap: 1vh;margin-top: 50px;">
+                   <button style="width: 3vw;border: 2px solid gray;border-radius: 30px;height: 3vh;font-size: 0.8vw;">Login</button>
+                   <button style="width: 4vw;border: 2px solid gray;border-radius: 30px;height: 3vh;font-size: 0.8vw;">Register</button>
+                   <button style="width: 5vw;border: 2px solid gray;border-radius: 30px;height: 3vh;font-size: 0.8vw;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        </div>
+        
+        
+        </div>
+        
+         </footer>
+
+
+
+
+</div>
+
+
+</body>
+</html>
